@@ -1,1 +1,439 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,500&display=swap');
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  :root {
+    --primary-color: #0284c7; 
+    --body-bg-color: #e2e8f0;
+
+    --ff-primary: "Playfair Display", sans-serif;
+    --ff-secondary: "Roboto", sans-serif;
+
+    --neutral-clr-100: hsl(0, 0, 0);
+    --neutral-clr-900: hsl(0, 0%, 100%);
+
+    --light-shadow: 1px 1px 15px 3px rgb(124, 119, 119);
+  }
+
+  body {
+    min-height: 100vh;
+    font-family: var(--ff-secondary);
+    background-color: var(--body-bg-color);
+  }
+
+  header {
+    position: relative;
+    padding-top: 1rem;
+    padding: 1.5rem;
+  }
+
+  .headerBackground {
+    width: 100%;
+    height: 350px;
+    margin: 0 -1.5rem;
+
+    position: absolute;
+    top: 0;
+    z-index: -10;
+
+
+    background-color: var(--primary-color);
+    clip-path: polygon(0 0, 100% 0%, 100% 40%, 0% 100%);
+  }
+
+ 
+  .imageContainer {
+    height: 300px;
+    width: 200px;
+    margin: 0px auto;
+    margin-bottom: 2rem;
+
+    position: relative;
+    box-shadow: var(--light-shadow);
+  }
+
+
+  #woman-working {
+    height: 100%;
+    width: 100%;
+
+    object-fit: cover;
+  }
+
+  .name, h1, h2 {
+    font-family: var(--ff-primary);
+  }
+
+  .name {
+    position: absolute;
+    bottom: 0;
+    margin-left: 0.5rem;
+
+    font-size: 2.5rem;
+    
+
+    color: var(--neutral-clr-900);
+    text-shadow: 3px 5px black;
+  }
+
+  .aboutInfo {
+    margin-bottom: 4rem;
+  }
+
+  .aboutInfo  h1 {
+    text-align: center; 
+    margin-bottom: 1.2rem;
+  }
+
+  .aboutInfoPargaraph {
+    margin-bottom: 2rem;
+  }
+
+
+  .aboutLinks {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .aboutLinks svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  main {
+    margin: 0 auto;
+    width: fit-content;
+  }
+
+  main h2 {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 2rem;
+  }
+
+  .projectsContainer {
+    width: 100%;
+  }
+
+  .project {
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 2.5rem;
+    max-width: 288px;
+  }
+
+  .projectDisplay {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 3rem 3rem;
+
+    background-color: red;
+    color: var(--neutral-clr-900)
+  }
+
+  .projectHeader {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .projectLinks {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .projectLinks svg {
+    width: 25px;
+    height: 25px;
+
+    ;
+  }
+
+  .projectName {
+    font-size: 1.25rem;
+    font-weight: bold;
+    font-family: var(--ff-primary);
+
+    display: block;
+  }
+
+  .projectInfo {
+    padding: 1rem;
+
+    background-color: var(--neutral-clr-900);
+    box-shadow: var(--light-shadow);
+  }
+
+
+  footer {
+    background-color: var(--primary-color);
+  }
+
+  .contactInfo {
+    color: var(--neutral-clr-900);
+    margin-bottom: 1rem;
+    padding: 0.25rem;
+  }
+
+  .contactInfo h3 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .contactInfo p {
+    margin-bottom: 1rem;
+  }
+
+  .phone {
+    display: flex;
+    gap: 5px;
+  }
+
+
+  .email {
+    display: flex;
+    gap: 5px;
+    
+  }
+
+  .phone svg, .email svg {
+    display: none;
+  }
+
+  .contactLinks {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .contactLinks svg {
+    
+    height: 50px;
+    width: 50px;
+  }
+
+  .imageContainerFooter {
+    width: 100%;
+    height: 300px;
+  }
+
+  .imageContainerFooter {
+    height: 100%;
+    width: 100%;
+
+    object-fit: cover;
+  }
+  
+  @media (min-width: 540px) {
+
+    .name {
+      top: 30px;
+      right: 50px;
+    }
+    
+    .aboutInfo {
+      background-color: var(--neutral-clr-900);
+      width: 85%;
+      margin-left: auto;
+      margin-top: 5rem;
+      padding: 1rem;
+    }
+
+    .aboutInfoPargaraph {
+      font-size: 1rem;
+    }
+
+    .aboutLinks {
+      display: none;
+    }
+
+    .imageContainer {
+      float: left;
+      height: 300px;
+      width: 300px;
+      position: static;
+      margin-top: -4rem;
+
+      margin-right: 1rem;
+      margin-bottom: 0;
+    }
+
+    .mainHeading {
+      text-align: start;
+      font-size: 1.5rem;
+    }
+
+    .projectsContainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 1rem;
+    }
+
+    .project {
+      max-width: 250px;
+    }
+
+    .projectName {
+      font-size: 1.5rem;
+    }
+
+    .projectLinks svg {
+      height: 25px;
+      width: 25px;
+    }
+
+    .projectDescription {
+      font-size: 1rem;
+    }
+
+    footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      padding: 1rem;
+
+    }
+
+
+    .contactInfo {
+      font-size: 1rem;
+    }
+
+    .contactInfo h3 {
+      font-size: 2rem;
+    }
+
+    .phone svg, .email svg {
+      display: block;
+      width: 35px;
+      height: 35px;
+
+      fill: var(--neutral-clr-900);
+    }
+
+    .phone, .email {
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .imageContainerFooter {
+      width: 280px;
+      height: 400px;
+    }
+
+    #woman-talking {
+      height: 100%;
+      width: 100%;
+
+      object-fit: cover;
+    }
+  }
+
+  @media (min-width: 1024px) {
+
+    main {
+      width: initial;
+    }
+
+    .flexContainerHeader {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .imageContainer {
+      float: initial;
+      position: relative;
+      inset: 0;
+      margin: 0;
+      
+      height: 300px;
+      width: 300px;
+    }
+
+    .name {
+      top: initial;
+      right: initial;
+      margin: 0;
+
+      text-align: center;
+    }
+
+    .mainHeading {
+      text-align: center;
+    }
+
+    .aboutInfo {
+      width: 50vh;
+      max-width: 500px;
+      margin: 0;
+    }
+
+    .aboutLinks {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .projectsContainer {
+      grid-template-columns: 1fr 1fr 1fr;
+      max-width: 1900px;
+      margin: 0 auto;
+    }
+
+    .contactInfo h3 {
+      text-align: start;
+    }
+
+    .imageContainerFooter {
+      width: 500px;
+    }
+  }
